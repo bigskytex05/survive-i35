@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="TrafficCarData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://resources/TrafficCarData.gd" id="1_traffic"]
+
+[resource]
+script = ExtResource("1_traffic")
+id = &"construction_truck"
+display_name = "Construction Truck"
+personality = &"crawler"
+spawn_weight = 0.5
+body_style = 4
+size = Vector3(2.5, 3.1, 8.2)
+mass = 3.5
+speed_vs_limit_mph = Vector2(-24, -16)
+acceleration = 1.0
+headway = 2.0
+lane_change_aggression = 0.0
+signal_chance = 1.0
+keep_right = 1.0

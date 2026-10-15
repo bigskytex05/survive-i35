@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <!-- A pixelated blob behind a black censor bar. Nothing to see here. -->
+  <rect x="34" y="12" width="20" height="20" fill="#e2b48c"/>
+  <rect x="54" y="12" width="20" height="20" fill="#c99670"/>
+  <rect x="74" y="12" width="20" height="20" fill="#e2b48c"/>
+  <rect x="24" y="32" width="20" height="20" fill="#c99670"/>
+  <rect x="44" y="32" width="20" height="20" fill="#eec29b"/>
+  <rect x="64" y="32" width="20" height="20" fill="#d9a67e"/>
+  <rect x="84" y="32" width="20" height="20" fill="#c99670"/>
+  <rect x="24" y="76" width="20" height="20" fill="#d9a67e"/>
+  <rect x="44" y="76" width="20" height="20" fill="#c99670"/>
+  <rect x="64" y="76" width="20" height="20" fill="#eec29b"/>
+  <rect x="84" y="76" width="20" height="20" fill="#d9a67e"/>
+  <rect x="34" y="96" width="20" height="20" fill="#eec29b"/>
+  <rect x="54" y="96" width="20" height="20" fill="#d9a67e"/>
+  <rect x="74" y="96" width="20" height="20" fill="#c99670"/>
+  <g transform="rotate(-8 64 64)">
+    <rect x="6" y="48" width="116" height="32" rx="5" fill="#141313" stroke="#faf7f0" stroke-width="4"/>
+    <rect x="20" y="60" width="14" height="8" rx="2" fill="#faf7f0"/>
+    <rect x="42" y="60" width="14" height="8" rx="2" fill="#faf7f0"/>
+    <rect x="64" y="60" width="14" height="8" rx="2" fill="#faf7f0"/>
+    <rect x="86" y="60" width="22" height="8" rx="2" fill="#faf7f0"/>
+  </g>
+</svg>

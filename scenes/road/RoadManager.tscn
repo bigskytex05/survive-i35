@@ -1,0 +1,12 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://scenes/road/RoadManager.gd" id="1_road"]
+[ext_resource type="PackedScene" path="res://scenes/road/chunks/straight.tscn" id="2_straight"]
+[ext_resource type="PackedScene" path="res://scenes/road/chunks/curve_left.tscn" id="3_left"]
+[ext_resource type="PackedScene" path="res://scenes/road/chunks/curve_right.tscn" id="4_right"]
+[ext_resource type="PackedScene" path="res://scenes/road/chunks/overpass.tscn" id="5_overpass"]
+
+[node name="RoadManager" type="Node3D"]
+script = ExtResource("1_road")
+chunk_scenes = Array[PackedScene]([ExtResource("2_straight"), ExtResource("3_left"), ExtResource("4_right"), ExtResource("5_overpass")])
+chunk_weights = PackedFloat32Array(4, 2, 2, 1)

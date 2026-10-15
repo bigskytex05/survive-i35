@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="PropData" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://resources/PropData.gd" id="1_prop"]
+[ext_resource type="Texture2D" path="res://assets/ui/prop_high_beams.svg" id="2_icon"]
+[ext_resource type="Script" path="res://scenes/props/HighBeams.gd" id="3_behavior"]
+
+[resource]
+script = ExtResource("1_prop")
+id = &"high_beams"
+display_name = "High Beams"
+description = "For when the left lane needs to think about what it did."
+how_it_works = "4 seconds of blinding light. Drivers ahead in the beam slow way down and wander in their lane until 3 s after it leaves them."
+icon = ExtResource("2_icon")
+kind = 1
+cooldown = 10.0
+duration = 4.0
+behavior = ExtResource("3_behavior")

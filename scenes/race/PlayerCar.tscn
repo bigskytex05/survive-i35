@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scenes/race/PlayerCar.gd" id="1_car"]
+[ext_resource type="Script" path="res://scenes/race/CarModel.gd" id="2_model"]
+[ext_resource type="Resource" path="res://data/cars/suv.tres" id="3_suv"]
+
+[node name="PlayerCar" type="CharacterBody3D"]
+collision_mask = 6
+motion_mode = 1
+script = ExtResource("1_car")
+car_data = ExtResource("3_suv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+
+[node name="Model" type="Node3D" parent="."]
+script = ExtResource("2_model")

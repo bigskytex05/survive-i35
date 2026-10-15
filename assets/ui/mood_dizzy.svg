@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <!-- Blinded driver: yellow face, X eyes, little "o" mouth. -->
+  <circle cx="64" cy="64" r="52" fill="#f2c53d" stroke="#faf7f0" stroke-width="6"/>
+  <g stroke="#2b2928" stroke-width="8" stroke-linecap="round">
+    <line x1="36" y1="42" x2="54" y2="60"/>
+    <line x1="54" y1="42" x2="36" y2="60"/>
+    <line x1="74" y1="42" x2="92" y2="60"/>
+    <line x1="92" y1="42" x2="74" y2="60"/>
+  </g>
+  <ellipse cx="64" cy="88" rx="11" ry="13" fill="#2b2928"/>
+</svg>

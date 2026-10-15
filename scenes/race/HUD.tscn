@@ -1,0 +1,279 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scenes/race/HUD.gd" id="1_hud"]
+[ext_resource type="Script" path="res://scenes/ui/ProgressStrip.gd" id="2_strip"]
+[ext_resource type="Script" path="res://scenes/ui/PopupLayer.gd" id="3_popups"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_limit"]
+content_margin_left = 10.0
+content_margin_top = 4.0
+content_margin_right = 10.0
+content_margin_bottom = 2.0
+bg_color = Color(0.98, 0.97, 0.94, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.17, 0.16, 0.16, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="HUD" type="CanvasLayer"]
+layer = 3
+script = ExtResource("1_hud")
+
+[node name="Root" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Speedo" type="PanelContainer" parent="Root"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -264.0
+offset_top = -136.0
+offset_right = -24.0
+offset_bottom = -24.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="Row" type="HBoxContainer" parent="Root/Speedo"]
+layout_mode = 2
+theme_override_constants/separation = 18
+
+[node name="SpeedBox" type="VBoxContainer" parent="Root/Speedo/Row"]
+layout_mode = 2
+theme_override_constants/separation = -10
+
+[node name="SpeedValue" type="Label" parent="Root/Speedo/Row/SpeedBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(112, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "0"
+horizontal_alignment = 2
+
+[node name="Unit" type="Label" parent="Root/Speedo/Row/SpeedBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.55, 0.53, 0.49, 1)
+theme_override_font_sizes/font_size = 16
+text = "MPH"
+horizontal_alignment = 2
+
+[node name="LimitSign" type="PanelContainer" parent="Root/Speedo/Row"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_limit")
+
+[node name="LimitBox" type="VBoxContainer" parent="Root/Speedo/Row/LimitSign"]
+layout_mode = 2
+theme_override_constants/separation = -6
+
+[node name="Caption" type="Label" parent="Root/Speedo/Row/LimitSign/LimitBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "SPEED
+LIMIT"
+horizontal_alignment = 1
+
+[node name="LimitValue" type="Label" parent="Root/Speedo/Row/LimitSign/LimitBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "75"
+horizontal_alignment = 1
+
+[node name="Fps" type="Label" parent="Root"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.55)
+layout_mode = 0
+offset_left = 16.0
+offset_top = 10.0
+offset_right = 136.0
+offset_bottom = 36.0
+theme_override_font_sizes/font_size = 15
+text = "60 fps"
+
+[node name="HintPanel" type="PanelContainer" parent="Root"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -300.0
+offset_top = -84.0
+offset_right = 300.0
+offset_bottom = -28.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="Hint" type="Label" parent="Root/HintPanel"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 17
+text = "Hint"
+horizontal_alignment = 1
+
+[node name="TopBar" type="PanelContainer" parent="Root"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -430.0
+offset_top = 12.0
+offset_right = 430.0
+offset_bottom = 78.0
+grow_horizontal = 2
+mouse_filter = 2
+
+[node name="Row" type="HBoxContainer" parent="Root/TopBar"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 6
+
+[node name="TimeValue" type="Label" parent="Root/TopBar/Row"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(132, 0)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 44
+text = "3:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Divider" type="ColorRect" parent="Root/TopBar/Row"]
+custom_minimum_size = Vector2(2, 0)
+layout_mode = 2
+mouse_filter = 2
+color = Color(0.55, 0.53, 0.49, 0.3)
+
+[node name="Strip" type="Control" parent="Root/TopBar/Row"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(420, 44)
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+script = ExtResource("2_strip")
+
+[node name="Bonus" type="Label" parent="Root"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 120.0
+offset_bottom = 40.0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 28
+text = "+0.5"
+horizontal_alignment = 1
+
+[node name="Intro" type="PanelContainer" parent="Root"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -330.0
+offset_top = 110.0
+offset_right = 330.0
+offset_bottom = 258.0
+grow_horizontal = 2
+mouse_filter = 2
+
+[node name="Box" type="VBoxContainer" parent="Root/Intro"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="IntroTitle" type="Label" parent="Root/Intro/Box"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Kickoff"
+horizontal_alignment = 1
+
+[node name="IntroRoute" type="Label" parent="Root/Intro/Box"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.88, 0.33, 0.24, 1)
+theme_override_font_sizes/font_size = 20
+text = "Round Rock to Austin"
+horizontal_alignment = 1
+
+[node name="IntroScenario" type="Label" parent="Root/Intro/Box"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.55, 0.53, 0.49, 1)
+theme_override_font_sizes/font_size = 18
+text = "Scenario"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Banner" type="Label" parent="Root"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.58
+anchor_right = 0.5
+anchor_bottom = 0.58
+offset_left = -400.0
+offset_top = -80.0
+offset_right = 400.0
+offset_bottom = 80.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(400, 80)
+theme_override_constants/outline_size = 22
+theme_override_font_sizes/font_size = 120
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Popups" type="Control" parent="Root"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("3_popups")
+
+[node name="RotateNotice" type="CenterContainer" parent="Root"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Panel" type="PanelContainer" parent="Root/RotateNotice"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Root/RotateNotice/Panel"]
+layout_mode = 2
+text = "Turn your phone sideways.
+I-35 is wide. Your screen should be too."
+horizontal_alignment = 1

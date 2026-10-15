@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="CarData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://resources/CarData.gd" id="1_cardata"]
+
+[resource]
+script = ExtResource("1_cardata")
+id = &"ev"
+display_name = "EV"
+description = "Instant torque, zero emissions, one (1) bumper sticker about it. Light enough to get bullied."
+top_speed_mph = 100.0
+acceleration = 12.5
+brake_power = 24.0
+steer_rate = 1.8
+grip = 9.5
+mass = 0.75
+offroad_drag = 1.0
+body_style = 2
+size = Vector3(1.95, 1.45, 4.6)
+wheel_radius = 0.38
+default_paint = Color(0.13, 0.6, 0.58, 1)
+engine_sound = &"engine_ev"
+engine_gears = 0
+engine_pitch = Vector2(0.45, 1.75)
+trait_id = &"silent_running"
+trait_name = "Silent Running"
+trait_description = "Quiet motor, so police take longer to notice you speeding."
+police_detection_scale = 0.6

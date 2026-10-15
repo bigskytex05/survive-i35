@@ -1,0 +1,125 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scenes/ui/TouchControls.gd" id="1_touch"]
+[ext_resource type="Script" path="res://scenes/ui/TouchButton.gd" id="2_button"]
+
+[node name="TouchControls" type="CanvasLayer"]
+process_mode = 3
+layer = 5
+script = ExtResource("1_touch")
+
+[node name="Root" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="SteerLeft" type="Control" parent="Root"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 28.0
+offset_top = -210.0
+offset_right = 208.0
+offset_bottom = -30.0
+grow_vertical = 0
+mouse_filter = 2
+script = ExtResource("2_button")
+action = &"steer_left"
+glyph = 1
+slide_switch = true
+
+[node name="SteerRight" type="Control" parent="Root"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 222.0
+offset_top = -210.0
+offset_right = 402.0
+offset_bottom = -30.0
+grow_vertical = 0
+mouse_filter = 2
+script = ExtResource("2_button")
+action = &"steer_right"
+glyph = 2
+slide_switch = true
+
+[node name="Brake" type="Control" parent="Root"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -394.0
+offset_top = -190.0
+offset_right = -232.0
+offset_bottom = -30.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_filter = 2
+script = ExtResource("2_button")
+action = &"brake"
+text = "BRAKE"
+
+[node name="Gas" type="Control" parent="Root"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -214.0
+offset_top = -250.0
+offset_right = -30.0
+offset_bottom = -30.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_filter = 2
+script = ExtResource("2_button")
+action = &"accelerate"
+text = "GAS"
+font_size = 30
+accent = true
+
+[node name="Prop" type="Control" parent="Root"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -178.0
+offset_top = -398.0
+offset_right = -52.0
+offset_bottom = -272.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_filter = 2
+script = ExtResource("2_button")
+action = &"use_prop"
+text = "PROP"
+font_size = 20
+round_shape = true
+
+[node name="Pause" type="Control" parent="Root"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -84.0
+offset_top = 18.0
+offset_right = -24.0
+offset_bottom = 78.0
+grow_horizontal = 0
+mouse_filter = 2
+script = ExtResource("2_button")
+action = &"pause"
+glyph = 3
+round_shape = true
+hit_padding = 10.0

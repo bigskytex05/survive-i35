@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="TrafficCarData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://resources/TrafficCarData.gd" id="1_traffic"]
+[ext_resource type="Script" path="res://scenes/police/PoliceCar.gd" id="2_police"]
+
+[resource]
+script = ExtResource("1_traffic")
+id = &"police"
+display_name = "State Trooper"
+personality = &"police"
+spawn_weight = 0.0
+car_script = ExtResource("2_police")
+body_style = 5
+size = Vector3(1.95, 1.5, 5.0)
+mass = 1.15
+paints = PackedColorArray(0.11, 0.11, 0.12, 1)
+speed_vs_limit_mph = Vector2(-2, 2)
+acceleration = 10.0
+headway = 0.5
+lane_change_aggression = 0.6
+signal_chance = 0.0
+keep_right = 0.05

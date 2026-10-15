@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scenes/road/RoadChunk.gd" id="1_chunk"]
+
+[node name="CurveLeft" type="Node3D"]
+script = ExtResource("1_chunk")
+turn_degrees = 7.0

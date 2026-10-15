@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="TrafficCarData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://resources/TrafficCarData.gd" id="1_traffic"]
+
+[resource]
+script = ExtResource("1_traffic")
+id = &"pickup"
+display_name = "Pickup"
+personality = &"aggressive"
+spawn_weight = 3.0
+body_style = 2
+size = Vector3(2.05, 1.9, 5.8)
+mass = 1.3
+speed_vs_limit_mph = Vector2(0, 12)
+acceleration = 2.6
+headway = 0.9
+lane_change_aggression = 0.75
+signal_chance = 0.35
+keep_right = 0.0

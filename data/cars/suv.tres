@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="CarData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://resources/CarData.gd" id="1_cardata"]
+
+[resource]
+script = ExtResource("1_cardata")
+id = &"suv"
+display_name = "SUV"
+description = "Balanced all-rounder. Seats seven, carries zero urgency."
+top_speed_mph = 105.0
+acceleration = 9.0
+brake_power = 22.0
+steer_rate = 1.5
+grip = 8.0
+mass = 1.0
+offroad_drag = 0.2
+body_style = 0
+size = Vector3(2.1, 1.8, 4.5)
+wheel_radius = 0.44
+default_paint = Color(0.84, 0.31, 0.22, 1)
+engine_sound = &"engine_six"
+engine_gears = 5
+engine_pitch = Vector2(0.75, 1.9)
+trait_id = &"shoulder_surfer"
+trait_name = "Shoulder Surfer"
+trait_description = "Almost no speed loss on the shoulder or the grass. The shoulder is a lane if you believe."

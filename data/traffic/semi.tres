@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="TrafficCarData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://resources/TrafficCarData.gd" id="1_traffic"]
+
+[resource]
+script = ExtResource("1_traffic")
+id = &"semi"
+display_name = "18-Wheeler"
+personality = &"hauler"
+spawn_weight = 1.5
+body_style = 3
+size = Vector3(2.6, 4.1, 20.5)
+mass = 5.0
+speed_vs_limit_mph = Vector2(-10, -3)
+acceleration = 0.9
+headway = 1.8
+lane_change_aggression = 0.15
+signal_chance = 0.9
+keep_right = 0.8

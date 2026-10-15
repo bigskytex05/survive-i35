@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="CarData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://resources/CarData.gd" id="1_cardata"]
+
+[resource]
+script = ExtResource("1_cardata")
+id = &"truck"
+display_name = "Truck"
+description = "Lifted, loud, and legally a personality. Slow to get going, impossible to stop."
+top_speed_mph = 108.0
+acceleration = 7.0
+brake_power = 18.0
+steer_rate = 1.15
+grip = 7.0
+mass = 2.2
+offroad_drag = 0.6
+body_style = 1
+size = Vector3(2.25, 2.0, 5.6)
+wheel_radius = 0.5
+default_paint = Color(0.24, 0.45, 0.74, 1)
+engine_sound = &"engine_v8"
+engine_gears = 4
+engine_pitch = Vector2(0.8, 1.75)
+trait_id = &"bully"
+trait_name = "Bully"
+trait_description = "Lighter cars you bump get shoved aside instead of slowing you down. Semis still win."

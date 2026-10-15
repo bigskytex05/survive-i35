@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <!-- Furious driver: red face, angled brows, a frown, a puff of steam. -->
+  <circle cx="64" cy="68" r="50" fill="#e3453d" stroke="#faf7f0" stroke-width="6"/>
+  <path d="M30 50 L56 60" stroke="#2b2928" stroke-width="8" stroke-linecap="round"/>
+  <path d="M98 50 L72 60" stroke="#2b2928" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="46" cy="70" r="7" fill="#2b2928"/>
+  <circle cx="82" cy="70" r="7" fill="#2b2928"/>
+  <path d="M42 100 Q64 82 86 100" fill="none" stroke="#2b2928" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="104" cy="20" r="10" fill="#faf7f0"/>
+  <circle cx="116" cy="34" r="7" fill="#faf7f0"/>
+</svg>

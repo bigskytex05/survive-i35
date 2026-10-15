@@ -1,0 +1,14 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="Script" path="res://scenes/traffic/TrafficSpawner.gd" id="1_spawner"]
+[ext_resource type="Script" path="res://resources/TrafficCarData.gd" id="2_data"]
+[ext_resource type="Resource" path="res://data/traffic/sedan.tres" id="3_sedan"]
+[ext_resource type="Resource" path="res://data/traffic/minivan.tres" id="4_minivan"]
+[ext_resource type="Resource" path="res://data/traffic/pickup.tres" id="5_pickup"]
+[ext_resource type="Resource" path="res://data/traffic/semi.tres" id="6_semi"]
+[ext_resource type="Resource" path="res://data/traffic/construction_truck.tres" id="7_work"]
+
+[node name="TrafficSpawner" type="Node3D"]
+process_physics_priority = 10
+script = ExtResource("1_spawner")
+roster = Array[ExtResource("2_data")]([ExtResource("3_sedan"), ExtResource("4_minivan"), ExtResource("5_pickup"), ExtResource("6_semi"), ExtResource("7_work")])

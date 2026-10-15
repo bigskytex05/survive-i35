@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="PropData" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://resources/PropData.gd" id="1_prop"]
+[ext_resource type="Texture2D" path="res://assets/ui/prop_radar.svg" id="2_icon"]
+[ext_resource type="Script" path="res://scenes/props/RadarDetector.gd" id="3_behavior"]
+
+[resource]
+script = ExtResource("1_prop")
+id = &"radar_detector"
+display_name = "Radar Detector"
+description = "Suction-cupped to the windshield since 1994. Beeps at cops and, occasionally, at a donut shop door."
+how_it_works = "Always on. Speed traps can't clock you all trip. It won't help once you've started a chase some other way."
+icon = ExtResource("2_icon")
+kind = 0
+cooldown = 0.0
+duration = 0.0
+behavior = ExtResource("3_behavior")

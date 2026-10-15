@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="TrafficCarData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://resources/TrafficCarData.gd" id="1_traffic"]
+
+[resource]
+script = ExtResource("1_traffic")
+id = &"sedan"
+display_name = "Compact Sedan"
+personality = &"normal"
+spawn_weight = 4.0
+body_style = 0
+size = Vector3(1.85, 1.45, 4.7)
+mass = 0.85
+speed_vs_limit_mph = Vector2(-3, 9)
+acceleration = 2.4
+headway = 1.1
+lane_change_aggression = 0.45
+signal_chance = 0.7
+keep_right = 0.1

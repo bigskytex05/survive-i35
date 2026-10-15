@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scenes/road/RoadChunk.gd" id="1_chunk"]
+[ext_resource type="Script" path="res://scenes/road/decor/Overpass.gd" id="2_overpass"]
+
+[node name="Overpass" type="Node3D"]
+script = ExtResource("1_chunk")
+allow_repeat = false
+tree_free_ranges = Array[Vector2]([Vector2(36, 84)])
+
+[node name="Bridge" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -60)
+script = ExtResource("2_overpass")

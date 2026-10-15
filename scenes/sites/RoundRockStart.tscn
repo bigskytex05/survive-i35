@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scenes/sites/StartSite.gd" id="1_start"]
+[ext_resource type="Script" path="res://scenes/sites/DoughnutHole.gd" id="2_donut"]
+
+[node name="RoundRockStart" type="Node3D"]
+script = ExtResource("1_start")
+
+[node name="DoughnutHole" type="Node3D" parent="."]
+transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, 40, 0, -78)
+script = ExtResource("2_donut")
